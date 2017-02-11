@@ -294,6 +294,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     }
 
     body .spot-list a.spot > .img {
+        margin-top: 0;
         margin-bottom: 0;
     }
     body .spot-list a.spot > .content {
@@ -322,6 +323,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     .spot-list a.spot .img {
         height: 20vw;
     }
+    .spot-list a.spot > .content {
+        margin-top: 0;
+        position: relative;
+        padding: 20px;
+    }
 }
 
 @media (min-width: 1200px) {
@@ -343,8 +349,9 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 
 
-
-
+body {
+    padding-top: 130px;
+}
 
 .dropdown-menu .button {
     background: none;
@@ -353,14 +360,97 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     display: block;
 }
 
+/*
 .navbar-collapse .search,
 .navbar-collapse .language {
     display: inline-block;
     margin-right: 5px;
 }
+*/
 
 
+
+
+
+.navbar-form {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 0;
+}
+.search {
+    position: relative;
+}
+.search .btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border: none;
+}
+
+.navbar-header {
+    height: 60px;
+}
+.navbar-collapse .language {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
 .navbar-collapse .language .btn {
     border-radius: 0;
     border: none;
+}
+.navbar-collapse .language .dropdown-menu {
+    top: 40px;
+    left: auto;
+    right: 0;
+    border-radius: 2px;
+    border: none;
+}
+.navbar-collapse .language  .dropdown-menu > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.navbar-collapse .language .glyphicon {
+    vertical-align: baseline;
+}
+
+
+@media (min-width: 768px) {
+    .navbar-default .navbar-collapse {
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
+    }
+    
+    .navbar-collapse .search,
+    .navbar-collapse .language {
+        display: inline-block;
+        margin-right: 5px;
+    }
+    .navbar-collapse .search {
+        margin-right: 20px;
+    }
+    .navbar-form .form-control {
+        width: 300px;
+    }
+
+    .navbar-collapse .language .btn {
+        position: relative;
+    }
+    .navbar-collapse .language {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }
