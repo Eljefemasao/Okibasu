@@ -1,0 +1,25 @@
+
+a.bus-stop {
+    padding: 15px 0;
+    border-top: 1px solid #cccccc;
+    display: block;
+}
+
+a.bus-stop,
+a.bus-stop:hover {
+    color: #111111;
+    text-decoration: none;
+}
+a.bus-stop > * {
+    display: block;
+    line-height: 1.8;
+}
+a.bus-stop .name {
+    display: block;
+    font-size: 1.2em;
+}
+
+a.bus-stop .line {
+    display: block;
+    font-size: 0.75em;
+}
