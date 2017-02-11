@@ -25,6 +25,10 @@
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
     <script src="./assets/js/ie-emulation-modes-warning.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+
+    <script src="./assets/js/script.js"></script>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -45,12 +49,12 @@
                 <a class="navbar-brand" href="./index.html">MyGo</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
+                <form class="navbar-form navbar-right" onsubmit="event.preventDefault()">
                     <div class="form-group">
                         <input type="text" placeholder="いきたい場所を検索" class="form-control">
                     </div>
 
-                    <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    <button id="place-search" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
 
                     <div class="language">
                       <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -59,7 +63,7 @@
                       </button>
                       <ul class="dropdown-menu">
                         <li>
-                            <a href="">繁体字</a>
+                          <a href="">繁体字</a>
                         </li>
                         <li>
                           <a href="">簡体字</a>
@@ -78,117 +82,14 @@
 
 
 
-    <div class="spot-list">
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/01.jpg" alt="">
-            <div class="content">
-                <span class="name">沖縄美ら海水族館</span>
-                <span class="place">沖縄県国頭郡本部町</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/02.jpg" alt="">
-            <div class="content">
-                <span class="name">海中道路</span>
-                <span class="place">沖縄県うるま市</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/03.jpg" alt="">
-            <div class="content">
-                <span class="name">ガンガラーの谷</span>
-                <span class="place">沖縄県南城市</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/04.jpg" alt="">
-            <div class="content">
-                <span class="name">古宇利島</span>
-                <span class="place">沖縄県国頭郡今帰仁村</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/05.jpg" alt="">
-            <div class="content">
-                <span class="name">国際通り</span>
-                <span class="place">沖縄県那覇市</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/06.jpg" alt="">
-            <div class="content">
-                <span class="name">琉球村</span>
-                <span class="place">沖縄県国頭郡恩納村</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/07.jpg" alt="">
-            <div class="content">
-                <span class="name">オリオンハッピーパーク</span>
-                <span class="place">沖縄県名護市</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/08.jpg" alt="">
-            <div class="content">
-                <span class="name">首里城公園</span>
-                <span class="place">沖縄県那覇市</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/09.jpg" alt="">
-            <div class="content">
-                <span class="name">伊計ビーチ</span>
-                <span class="place">沖縄県うるま市</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/10.jpg" alt="">
-            <div class="content">
-                <span class="name">もとぶ元気村</span>
-                <span class="place">沖縄県国頭郡本部町</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/11.jpg" alt="">
-            <div class="content">
-                <span class="name">やちむんの里</span>
-                <span class="place">沖縄県中頭郡読谷村</span>
-            </div>
-        </a>
-        <a class="spot" href="./index.html">
-            <img src="./assets/images/spot/12.jpg" alt="">
-            <div class="content">
-                <span class="name">真栄田岬</span>
-                <span class="place">沖縄県国頭郡恩納村</span>
-            </div>
-        </a>
+    <div id="recommended-places" class="spot-list">
+
     </div>
 
 
     <div class="container">
         <div class="bus-stop-list">
-            <a class="bus-stop" href="./bus-stop.html">
-                <span class="date">17:32発</span>
-                <span class="time">60分</span>
-                <span class="pay">合計1,180円</span>
-                <span class="name">貨物ターミナル前〔那覇空港〕</span>
-                <span class="line">沖縄バス [120]名護西空港線 名護バスターミナル行</span>
-            </a>
-            <a class="bus-stop" href="./bus-stop.html">
-                <span class="date">17:32発</span>
-                <span class="time">60分</span>
-                <span class="pay">合計1,180円</span>
-                <span class="name">貨物ターミナル前〔那覇空港〕</span>
-                <span class="line">沖縄バス [120]名護西空港線 名護バスターミナル行</span>
-            </a>
-            <a class="bus-stop" href="./bus-stop.html">
-                <span class="date">17:32発</span>
-                <span class="time">60分</span>
-                <span class="pay">合計1,180円</span>
-                <span class="name">貨物ターミナル前〔那覇空港〕</span>
-                <span class="line">沖縄バス [120]名護西空港線 名護バスターミナル行</span>
-            </a>
+
         </div>
     </div>
 
