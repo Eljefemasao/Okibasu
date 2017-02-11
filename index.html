@@ -35,7 +35,6 @@
 <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <span class="sr-only">Toggle navigation</span>
@@ -45,65 +44,37 @@
                 </button>
                 <a class="navbar-brand" href="./index.html">oki-bus</a>
             </div>
-
-
-<!--
-            <ul class="nav navbar-nav navbar-right flip">
-                <li><a href="./users-add.html">Register</a></li>
-                <li><a href="./login.html">Login</a></li>
-                <li class="dropdown">
-                    <a href="http://lpt.localhost.com/#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Language <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="http://lpt.localhost.com/tops/change-lang/ja">日本語</a></li>
-                        <li><a href="http://lpt.localhost.com/tops/change-lang/en_US">英語</a></li>
-                        <li><a href="http://lpt.localhost.com/tops/change-lang/ar">アラビア</a></li>
-                    </ul>
-                </li>
-            </ul>
--->
-
-
-
             <div id="navbar" class="navbar-collapse collapse">
                 <form class="navbar-form navbar-right">
                     <div class="form-group">
                         <input type="text" placeholder="いきたい場所を検索" class="form-control">
                     </div>
+
                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                    <div>
-                      <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
-                        <span class="glyphicon glyphicons-globe" aria-hidden="true"></span>
+
+                    <div class="language">
+                      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        <span class="glyphicon glyphicons-globe" aria-hidden="true">日本語 </span>
+                        <span class="caret"></span>
                       </button>
-                      <span class="caret"></span></button>
                       <ul class="dropdown-menu">
                         <li>
-                          <button class="btn btn-default">繁体字</button>
+                            <a href="">繁体字</a>
                         </li>
                         <li>
-                          <button class="btn btn-default">簡体字</button>
+                          <a href="">簡体字</a>
                         </li>
                         <li>
-                          <button class="btn btn-default">English</button>
+                          <a href="">English</a>
                         </li>
                         <li>
-                          <button class="btn btn-default">日本語</button>
+                          <a href="">日本語</a>
                         </li>
                       </ul>
                     </div>
                 </form>
             </div><!--/.navbar-collapse -->
-        </div>
     </nav>
-
-    <div class="jumbotron">
-        <div class="container">
-            <br><br><br><br>
-            <button class="btn btn-default">繁体字</button>
-            <button class="btn btn-default">簡体字</button>
-            <button class="btn btn-default">English</button>
-            <button class="btn btn-default">日本語</button>
-        </div>
-    </div>
 
     <div class="container">
         <div class="bus-stop-list">

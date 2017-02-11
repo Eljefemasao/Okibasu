@@ -23,3 +23,17 @@ a.bus-stop .line {
     display: block;
     font-size: 0.75em;
 }
+
+
+
+.dropdown-menu .button {
+    background: none;
+    border: none;
+    width: 100%;
+    display: block;
+}
+
+.navbar-collapse .language {
+    display: inline-block;
+    margin-right: 5px;
+}
