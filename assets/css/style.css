@@ -691,15 +691,195 @@ body {
 
 
 
+body.bus-stop-page {
+    padding-top: 125px;
+}
 
-
-
+.bus-stop-page .navbar {
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
 
 
 .bus-stop-page .jumbotron {
-    background-image: url(./assets/images/bus-stop-sample.jpg);
+    margin-bottom: 0;
+    background-image: url(../images/bus-stop-sample.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 400px;
+    height: 60vw;
+    box-shadow: 0 -5px 5px 0 rgba(0, 0, 0, 0.1) inset;
+    position: relative;
+}
+
+.bus-stop-page .jumbotron .title {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    padding: 10px 15px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.75);
+}
+
+.bus-stop-detail-area {
+    padding: 20px 0;
+    background: #ffffff;
+    box-shadow: 0 2.5px 2.5px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: block;
+}
+a.bus-stop-detail-area,
+a.bus-stop-detail-area:hover,
+a.bus-stop-detail-area:focus {
+    text-decoration: none;
+    color: #111111;
+}
+
+.bus-stop-detail-area .name {
+    margin-bottom: 0;
+    font-size: 16px;
+}
+.bus-stop-detail-area .line {
+    margin-top: 5px;
+    margin-bottom: 0;
+    color: #999999;
+    font-size: 10px;
+}
+
+.bus-stop-detail-area .name,
+.bus-stop-detail-area .line {
+    width: calc(100% - 30px - 10px - 5px);
+}
+.bus-stop-detail-area .map {
+    font-size: 30px;
+    display: block;
+    width: 70px;
+    height: 30px;
+    line-height: 1;
+
+    margin: auto 0 auto auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.bus-stop-detail-area .map:before {
+    content: "";
+    width: 2px;
+    height: 60px;
+    background: #eeeeee;
+    display: block;
+    position: absolute;
+    top: -15px;
+    left: 0;
+}
+.bus-stop-detail-area .map .glyphicon-map-marker {
+    top: -8px;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.bus-stop-detail-area .map .small {
+    margin-top: -5px;
+    font-size: 10px;
+    text-align: center;
+    line-height: 1;
+    display: block;
+    letter-spacing: 0;
+}
+
+@media (min-width: 768px) {
+    body.bus-stop-page {
+        padding-top: 60px;
+    }
+
+    .bus-stop-page .jumbotron {
+        height: 400px;
+    }
+    .bus-stop-detail-area {
+        padding: 40px 0;
+    }
+    .bus-stop-detail-area .name {
+        font-size: 20px;
+    }
+    .bus-stop-detail-area .line {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 992px) {
+    .bus-stop-page .jumbotron {
+        height: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+body.bus-stop-page .bus-stop-area {
+    margin: 60px 0;
+}
+body.bus-stop-page .bus-stop-area .title {
+    margin-bottom: 40px;
+}
+body.bus-stop-page .bus-stop-area .travel-data {
+    margin-bottom: 50px;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+}
+body.bus-stop-page .bus-stop-area .travel-data > * {
+    display: table-cell;
+    text-align: center;
+}
+body.bus-stop-page .bus-stop-area .travel-data > * > * {
+    display: block;
+}
+body.bus-stop-page .bus-stop-area .travel-data > * .area-title {
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+body.bus-stop-page .bus-stop-area .travel-data > * .num {
+    padding: 0 5px;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #2e98e8;
+}
+
+body.bus-stop-page .bus-stop-area .travel-data .time {
+
+}
+body.bus-stop-page .bus-stop-area .travel-data .transfer {
+
+}
+body.bus-stop-page .bus-stop-area .travel-data .fare {
+
+}
+
+/*
+<div class="time-area">
+    <span class="time">11:15</span>
+    <span class="time">11:28</span>
+</div>
+<div class="name-area">
+    <span class="name">那覇空港国際線ターミナル前</span>
+    <span class="line">東陽バス・３１泡瀬西線・泡瀬営業所行</span>
+    <span class="transfer">乗り換え：<span class="num">1</span>回</span>
+    <span class="fare">合計金額：<span class="num">500</span>円</span>
+</div>
+*/
+
+
+@media (min-width: 768px) {
+
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
 }
