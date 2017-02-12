@@ -1,5 +1,124 @@
+/* Bootstrapキャンセル */
+/* -------------------------------------------------- */
+.navbar-default {
+    background: #ffffff;
+    border-bottom: none;
+}
+
+.navbar-default .navbar-toggle {
+    border-radius: 0;
+    border: none;
+}
+
+
+.thumbnail {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+
+    line-height: 1;
+}
+.thumbnail > * {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: none;
+    max-height: none;
+    display: block;
+}
+
+
 body {
-    background: #fafafa;
+	letter-spacing: 0.075em;
+}
+img, iframe {
+    max-width: 100%;
+}
+a {
+	cursor: pointer;
+}
+
+
+.form-control {
+	padding: 10px 15px;
+    height: auto;
+    border-radius: 2px;
+    border: none;
+    box-shadow: none;
+    background: rgba(0, 0, 0, 0.05);
+}
+.form-control:focus {
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25) inset;
+}
+.search {
+
+}
+
+
+.search .btn,
+.search .btn:hover,
+.search .btn:focus {
+    background: none;
+    border: none;
+    color: #111111;
+}
+
+/*
+.form-group.search:before {
+    content: "\e003";
+    font-family: 'Glyphicons Halflings';
+    display: block;
+}
+*/
+
+a.btn,
+a.btn:hover,
+a.btn:focus {
+	text-decoration: none;
+}
+
+.btn {
+	padding: 10px 15px;
+	box-sizing: border-box;
+	text-shadow: none;
+	border-radius: 2px;
+	line-height: 1;
+}
+
+.btn-lg, .btn-group-lg > .btn {
+	padding: 16px 24px;
+}
+
+.btn-sm, .btn-group-sm > .btn {
+	padding: 6px 9px;
+}
+
+
+
+
+/*
+    #badd3b
+
+    #1342af
+*/
+
+/* カスタマイズ */
+/* -------------------------------------------------- */
+body {
+    background: #eeeeee;
 }
 
 .spot-list a.spot,
@@ -8,16 +127,24 @@ body {
 }
 
 .spot-list a.spot:hover,
-.bus-spot-list a.bus-spot:hover {
+.spot-list a.spot:focus,
+.bus-spot-list a.bus-spot:hover,
+.bus-spot-list a.bus-spot:focus {
     text-decoration: none;
 }
 
 
 /* バス停 */
+
+.bus-stop-area {
+    margin: 20px 0;
+}
+
+/
 a.bus-stop {
-    padding: 15px 0;
+    /* padding: 15px 0;
     border-top: 1px solid #cccccc;
-    display: block;
+    display: block; */
 }
 
 a.bus-stop,
@@ -25,6 +152,7 @@ a.bus-stop:hover {
     color: #111111;
     text-decoration: none;
 }
+/*
 a.bus-stop > * {
     display: block;
     line-height: 1.8;
@@ -38,12 +166,212 @@ a.bus-stop .line {
     display: block;
     font-size: 0.75em;
 }
+*/
+
+
+
+.bus-stop-list > * {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+
+    -webkit-justify-content: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+
+    box-sizing: border-box;
+}
+
+.bus-stop-list > * > * {
+    padding: 20px 0;
+}
+.bus-stop-list > * .time-area {
+    padding-left: 10px;
+    width: 6em;
+    text-align: center;
+}
+.bus-stop-list > * .name-area {
+    padding-left: 10px;
+}
+.bus-stop-list > * .else-area {
+    margin-left: auto;
+/*
+    padding-left: 10px;
+    padding-right: 20px;
+*/
+    box-sizing: content-box;
+}
+
+
+
+
+
+
+.bus-stop-list a.bus-stop + a.bus-stop {
+    margin-top: 2px;
+}
+
+.bus-stop-list a.bus-stop {
+    background: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+}
+.bus-stop-list a.bus-stop:hover {
+    opacity: 0.5;
+}
+
+/*  */
+.bus-stop-list a.bus-stop * span:not(.num) {
+    display: block;
+}
+.bus-stop-list a.bus-stop .num {
+    padding: 0 2px;
+    font-size: 1.5em;
+    color: #2e98e8;
+    font-weight: bold;
+}
+
+.bus-stop-list > a.bus-stop .else-area {
+    padding: 5px 10px 5px 5px;
+    align-self: center;
+}
+.bus-stop-list a.bus-stop .name {
+    font-size: 16px;
+}
+.bus-stop-list a.bus-stop .line {
+    margin-top: 5px;
+    color: #999999;
+    font-size: 10px;
+}
+.bus-stop-list a.bus-stop .transfer {
+    margin-top: 10px;
+    font-size: 10px;
+}
+.bus-stop-list a.bus-stop .fare {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.bus-stop-list a.bus-stop * .transfer:not(.num),
+.bus-stop-list a.bus-stop * .fare:not(.num) {
+    margin-right: 15px;
+    display: inline-block;
+}
+
+.bus-stop .time-area .time + .time:before {
+    content: "";
+    display: block;
+    margin: 8px auto;
+    width: 1px;
+    height: 8px;
+    background: #111111;
+    text-align: center;
+}
+
+.bus-stop .else-area .thumbnail {
+    width: 60px;
+    height: 60px;
+    /* 取り急ぎ
+    display: none;
+    */
+}
+
+
+/*
+<div class="travel">
+    <div class="time-area">
+        <span class="time">5分</span>
+    </div>
+    <div class="name-area">
+        <span class="name">現在地</span>
+    </div>
+    <div class="else-area">
+        <span class="fare">¥480</span>
+    </div>
+</div>
+
+<a class="bus-stop">
+    <div class="time-area">
+        <span class="time">11:00</span>
+    </div>
+    <div class="name-area">
+        <span class="name">那覇空港国際線ターミナル前</span>
+        <span class="line">東陽バス・３１泡瀬西線・泡瀬営業所行</span>
+    </div>
+    <div class="else-area">
+        <div class="thumbnail">
+            <img src="" alt="">
+        </div>
+    </div>
+</a>
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 観光地 */
+.spot-area .container {
+    margin: 0;
+    padding: 0;
+    width: auto;
+}
+
+.spot-list {
+    margin: -5px;
+}
+.spot-list a.spot .img,
+.spot-list a.spot .content {
+    margin: 5px;
+}
 .spot-list a.spot {
+/*
+    margin: 7.5px 5px;
+*/
+/*
     margin-top: 2px;
+*/
+    padding: 0;
     height: 60vw;
+    position: relative;
+
+    overflow: hidden;
+}
+.spot-list a.spot > .img {
+    width: 100%;
+    height: 100%;
+/*
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    max-width: none;
+    max-height: none;
+*/
+    position: absolute;
+
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
@@ -60,21 +388,17 @@ a.bus-stop .line {
     -ms-flex-pack: center;
     justify-content: center;
 
-    position: relative;
-
     overflow: hidden;
 }
-.spot-list a.spot > img {
-    width: auto;
-    height: auto;
+.spot-list a.spot > .img img {
     min-width: 100%;
     min-height: 100%;
     max-width: none;
     max-height: none;
+
     display: block;
-    position: absolute;
 }
-.spot-list a.spot > *:not(img) {
+.spot-list a.spot > .content {
     padding: 4vw 15px;
     width: 100%;
     height: 100%;
@@ -98,28 +422,136 @@ a.bus-stop .line {
     -ms-flex-pack: end;
     justify-content: flex-end;
 
-background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 99%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
-background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.5) 99%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
-background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.5) 99%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */_
+    box-sizing: border-box;
+
+/* 0.5 */
+/*
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.5) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.5) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.5) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#80000000',GradientType=0 ); /* IE6-9 */
+*/
+/* 0.75 */
+background: -moz-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.75) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.75) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0) 50%,rgba(0,0,0,0.75) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#bf000000',GradientType=0 ); /* IE6-9 */
+
 /*
     background-color: rgba(0, 0, 0, 0.5);
     background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.0)), to(rgba(0, 0, 0, 0.5)));
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5));
 */
-
+/*
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5) inset;
+*/
 }
 .spot-list a.spot span {
     display: block;
     font-size: 2.5vw;
-    text-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 1), 0 0 5px rgba(0, 0, 0, 1), 0 0 2px rgba(0, 0, 0, 0.5);
 }
 .spot-list a.spot .name {
+    margin-bottom: 0.25em;
     font-size: 5vw;
 }
 
 
+
+
+@media (min-width: 768px) {
+    .spot-area .container {
+        margin: 50px;
+        width: auto;
+    }
+
+    .spot-list {
+        margin: -5px;
+    }
+    .spot-list a.spot .img,
+    .spot-list a.spot .content {
+        margin: 5px;
+    }
+
+    .spot-list a.spot {
+        height: auto;
+        overflow: auto;
+    }
+    .spot-list a.spot:hover {
+        opacity: 0.6;
+    }
+
+    .spot-list a.spot > .img {
+        margin-bottom: 0;
+        height: 30vw;
+        position: relative;
+    }
+    .spot-list a.spot > .content {
+        margin-top: 0;
+        position: relative;
+        padding: 15px;
+        background: #ffffff
+    }
+
+    body .spot-list a.spot > .img {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    body .spot-list a.spot > .content {
+        margin-top: 0;
+    }
+
+    .spot-list a.spot span {
+        font-size: 14px;
+        color: #111111;
+        text-shadow: none;
+    }
+    .spot-list a.spot .name {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 992px) {
+    .spot-list {
+        margin: -15px;
+    }
+    .spot-list a.spot .img,
+    .spot-list a.spot .content {
+        margin: 15px;
+    }
+
+    .spot-list a.spot .img {
+        height: 20vw;
+    }
+    .spot-list a.spot > .content {
+        margin-top: 0;
+        position: relative;
+        padding: 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    padding-top: 185px;
+}
 
 .dropdown-menu .button {
     background: none;
@@ -128,7 +560,146 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
     display: block;
 }
 
+/*
+.navbar-collapse .search,
 .navbar-collapse .language {
     display: inline-block;
     margin-right: 5px;
+}
+*/
+
+
+
+
+
+.navbar-form {
+    margin-top: 10px;
+    margin-bottom: 0;
+    padding-top: 0;
+}
+.search {
+    position: relative;
+}
+.search .btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+
+
+.navbar-default .navbar-collapse,
+.navbar-default .navbar-form {
+    border: none;
+}
+
+.navbar-header {
+    height: 60px;
+}
+.navbar-collapse .language {
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.navbar-collapse .language .btn {
+    border-radius: 0;
+    border: none;
+}
+.navbar-collapse .language .dropdown-menu {
+    top: 40px;
+    left: auto;
+    right: 0;
+    border-radius: 2px;
+    border: none;
+}
+.navbar-collapse .language  .dropdown-menu > li > a {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.navbar-collapse .language .glyphicon {
+    vertical-align: baseline;
+}
+
+.nav-tabs-oliginal {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.nav-tabs-oliginal li {
+    display: table-cell;
+    text-align: center;
+}
+.nav-tabs-oliginal li a,
+.nav-tabs-oliginal li a:hover,
+.nav-tabs-oliginal li a:target {
+    text-decoration: none;
+}
+.nav-tabs-oliginal li a {
+    padding: 10px 0 15px 0;
+    text-align: center;
+    display: block;
+    position: relative;
+    color: #2e98e8;
+}
+.nav-tabs-oliginal li.current a:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2e98e8;
+}
+
+@media (min-width: 768px) {
+
+    .navbar-collapse .search,
+    .navbar-collapse .language {
+        display: inline-block;
+        margin-left: 20px;
+    }
+    .navbar-form .form-control {
+        width: 300px;
+    }
+
+    .navbar-collapse .language .btn {
+        position: relative;
+    }
+    .navbar-collapse .language {
+        position: relative;
+        top: 0;
+    }
+}
+
+@media (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bus-stop-page .jumbotron {
+    background-image: url(./assets/images/bus-stop-sample.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
 }

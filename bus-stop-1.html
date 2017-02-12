@@ -37,48 +37,35 @@
     <![endif]-->
 </head>
 
-<body>
+<body class="bus-stop-page">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./index.html">MyGo</a>
+        </div>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="./index.html">MyGo</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
+        <div id="navbar" class="navbar-collapse collapse in">
+            <form class="navbar-form navbar-right">
+                <div class="search">
                     <div class="form-group">
                         <input type="text" placeholder="いきたい場所を検索" class="form-control">
                     </div>
-
                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
 
-                    <div class="language">
-                      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <div class="language">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                         <span class="glyphicon glyphicons-globe" aria-hidden="true">日本語 </span>
                         <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                            <a href="">繁体字</a>
-                        </li>
-                        <li>
-                          <a href="">簡体字</a>
-                        </li>
-                        <li>
-                          <a href="">English</a>
-                        </li>
-                        <li>
-                          <a href="">日本語</a>
-                        </li>
-                      </ul>
-                    </div>
-                </form>
-            </div><!--/.navbar-collapse -->
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">繁体字</a></li>
+                        <li><a href="">簡体字</a></li>
+                        <li><a href="">English</a></li>
+                        <li><a href="">日本語</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div><!--/.navbar-collapse -->
     </nav>
 
     <div class="jumbotron" style="background-image: url(http://localhost:3000/assets/assets/images/bus-stop-sample.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover; height: 400px;">
@@ -97,6 +84,126 @@
             <a class="btn btn-primary" href="https://www.google.co.jp/maps/dir/CafeRestaurant+LA+TiLLA+-%E3%82%AB%E3%83%95%E3%82%A7%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3+%E3%83%A9%E3%83%BB%E3%83%86%E3%82%A3%E3%83%BC%E3%83%A9-/%E6%B2%96%E7%B8%84%E7%BE%8E%E3%82%89%E6%B5%B7%E6%B0%B4%E6%97%8F%E9%A4%A8,+%E3%80%92905-0206+%E6%B2%96%E7%B8%84%E7%9C%8C%E5%9B%BD%E9%A0%AD%E9%83%A1%E6%9C%AC%E9%83%A8%E7%94%BA%E7%9F%B3%E5%B7%9D%EF%BC%94%EF%BC%92%EF%BC%94/@26.6882914,127.8752271,16.24z/data=!4m14!4m13!1m5!1m1!1s0x0:0x8594c199c5b83db0!2m2!1d127.8777988!2d26.6851328!1m5!1m1!1s0x34e4fa3152619e3d:0xea08a6700fdd9ffe!2m2!1d127.877932!2d26.694158!3e2">バス停から目的地</a>
         </p>
     </div>
+
+    <div class="container">
+        <div class="bus-stop-list">
+            <a class="bus-stop" href="./bus-stop.html">
+                <div class="time-area">
+                    <span class="time">10:50</span>
+                </div>
+                <div class="name-area">
+                    <span class="name">現在地</span>
+                </div>
+                <div class="else-area">
+
+                </div>
+            </a>
+
+            <div class="travel">
+                <div class="time-area">
+                    <span class="time">10分</span>
+                </div>
+                <div class="name-area">
+                    <span class="name">徒歩</span>
+                </div>
+                <div class="else-area">
+
+                </div>
+            </div>
+
+            <a class="bus-stop" href="./bus-stop.html">
+                <div class="time-area">
+                    <span class="time">11:00</span>
+                </div>
+                <div class="name-area">
+                    <span class="name">那覇空港国際線ターミナル前</span>
+                    <span class="line">東陽バス・３１泡瀬西線・泡瀬営業所行</span>
+                </div>
+                <div class="else-area">
+                    <div class="thumbnail">
+                        <img src="./assets/images/bus-stop/01.jpg" alt="">
+                    </div>
+                </div>
+            </a>
+
+            <div class="travel">
+                <div class="time-area">
+                    <span class="time">15分</span>
+                </div>
+                <div class="name-area">
+                    <span class="name">バス</span>
+                </div>
+                <div class="else-area">
+                    <span class="fare">¥480</span>
+                </div>
+            </div>
+
+            <a class="bus-stop" href="./bus-stop.html">
+                <div class="time-area">
+                    <span class="time">11:15</span>
+                </div>
+                <div class="name-area">
+                    <span class="name">首里城公園前</span>
+                    <span class="line">東陽バス・３１泡瀬西線・泡瀬営業所行</span>
+                </div>
+                <div class="else-area">
+                    <div class="thumbnail">
+                        <img src="./assets/images/bus-stop/02.jpg" alt="">
+                    </div>
+                </div>
+            </a>
+
+            <div class="travel">
+                <div class="time-area">
+                    <span class="time">5分</span>
+                </div>
+                <div class="name-area">
+                    <span class="name">徒歩</span>
+                </div>
+                <div class="else-area">
+
+                </div>
+            </div>
+
+            <a class="bus-stop" href="./bus-stop.html">
+                <div class="time-area">
+                    <span class="time">11:20</span>
+                </div>
+                <div class="name-area">
+                    <span class="name">首里城公園</span>
+                </div>
+                <div class="else-area">
+                    <div class="thumbnail">
+                        <img src="./assets/images/spot/08.jpg" alt="">
+                    </div>
+                </div>
+            </a>
+
+
+<!--
+            <a class="bus-stop" href="./bus-stop.html">
+                <span class="date">17:32発</span>
+                <span class="time">60分</span>
+                <span class="pay">合計1,180円</span>
+                <span class="name">安里駅前／沖縄県路線バス [時刻表]</span>
+                <span class="line">東陽バス・３１泡瀬西線・泡瀬営業所行</span>
+            </a>
+            <a class="bus-stop" href="./bus-stop.html">
+                <span class="date">17:32発</span>
+                <span class="time">60分</span>
+                <span class="pay">合計1,180円</span>
+                <span class="name">貨物ターミナル前〔那覇空港〕</span>
+                <span class="line">沖縄バス [120]名護西空港線 名護バスターミナル行</span>
+            </a>
+            <a class="bus-stop" href="./bus-stop.html">
+                <span class="date">17:32発</span>
+                <span class="time">60分</span>
+                <span class="pay">合計1,180円</span>
+                <span class="name">貨物ターミナル前〔那覇空港〕</span>
+                <span class="line">沖縄バス [120]名護西空港線 名護バスターミナル行</span>
+            </a>
+-->
+        </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
