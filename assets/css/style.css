@@ -550,7 +550,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', e
 
 
 body {
-    padding-top: 130px;
+    padding-top: 185px;
 }
 
 .dropdown-menu .button {
@@ -574,7 +574,7 @@ body {
 
 .navbar-form {
     margin-top: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
     padding-top: 0;
 }
 .search {
@@ -620,11 +620,42 @@ body {
     vertical-align: baseline;
 }
 
+.nav-tabs-oliginal {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: table;
+    table-layout: fixed;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.1);
+}
+.nav-tabs-oliginal li {
+    display: table-cell;
+    text-align: center;
+}
+.nav-tabs-oliginal li a,
+.nav-tabs-oliginal li a:hover,
+.nav-tabs-oliginal li a:target {
+    text-decoration: none;
+}
+.nav-tabs-oliginal li a {
+    padding: 10px 0 15px 0;
+    text-align: center;
+    display: block;
+    position: relative;
+    color: #2e98e8;
+}
+.nav-tabs-oliginal li.current a:before {
+    content: "";
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2e98e8;
+}
 
 @media (min-width: 768px) {
-    .navbar-default .navbar-collapse {
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
-    }
 
     .navbar-collapse .search,
     .navbar-collapse .language {
@@ -650,4 +681,25 @@ body {
 
 @media (min-width: 1200px) {
 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.bus-stop-page .jumbotron {
+    background-image: url(./assets/images/bus-stop-sample.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 400px;
 }
