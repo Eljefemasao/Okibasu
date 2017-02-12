@@ -15,21 +15,21 @@ $(document).ready(function(){
     var date, time, pay, name, line;
 
     var busInfoArray = [
-    { departureTime: "17:32",
-      necessaryTime: "60min",
-      sumOfPay: "¥1,180",
+    { departureTime: "11:15",
+      arrivalTime: "11:28",
+      sumOfPay: "1,180",
       objective: "貨物ターミナル前（那覇空港）",
       recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
     },
-    { departureTime: "18:45",
-      necessaryTime: "25min",
-      sumOfPay: "¥1,180",
+    { departureTime: "11:15",
+      arrivalTime: "11:28",
+      sumOfPay: "1,180",
       objective: "貨物ターミナル前（那覇空港）",
       recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
     },
-    { departureTime: "17:32",
-      necessaryTime: "60min",
-      sumOfPay: "¥1,180",
+    { departureTime: "11:15",
+      arrivalTime: "11:28",
+      sumOfPay: "1,180",
       objective: "貨物ターミナル前（那覇空港）",
       recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
     }
@@ -37,12 +37,23 @@ $(document).ready(function(){
   ]
   for(var index=0; index<busInfoArray.length;index++) {
      $(".bus-stop-list").append(`<a class="bus-stop" href="./stopinfo/`+ (index + 1) +`">
-         <span class="date">` + busInfoArray[index].departureTime + `</span>
-         <span class="time">` + busInfoArray[index].necessaryTime + `</span>
-         <span class="pay">` + busInfoArray[index].sumOfPay + `</span>
-         <span class="name">` + busInfoArray[index].objective + `</span>
-         <span class="line">` + busInfoArray[index].recommendationLine + `</span>
+         <div class="time-area">
+             <span class="time">` + busInfoArray[index].departureTime + `</span>
+             <span class="time">` + busInfoArray[index].arrivalTime + `</span>
+         </div>
+         <div class="name-area">
+             <span class="name">` + busInfoArray[index].objective + `</span>
+             <span class="line">` + busInfoArray[index].recommendationLine + `</span>
+             <span class="transfer">乗り換え：<span class="num">1</span>回</span>
+             <span class="fare">合計金額：<span class="num">` + busInfoArray[index].sumOfPay + `</span>円</span>
+         </div>
+         <div class="else-area">
+             <div class="thumbnail">
+                 <img src="./assets/assets/images/bus-stop/02.jpg" alt="">
+             </div>
+         </div>
      </a>`);
+
    }
 
   }
@@ -53,8 +64,10 @@ $(document).ready(function(){
   function appendRecommendedPlaces(localSpotsList) {
     var recommendedPlaces = localSpotsList;
     for (var index = 0; index < recommendedPlaces.length; index++){
-      $("#recommended-places").append(`<a class="spot" href="./index.html">
-          <img src="` + recommendedPlaces[index].img + `" alt="">
+      $("#recommended-places").append(`<a class="spot col col-xs-12 col-sm-6 col-md-4" href="./index.html">
+          <div class="img">
+              <img src="` + recommendedPlaces[index].img + `" alt="">
+          </div>
           <div class="content">
               <span class="name">` + recommendedPlaces[index].name + `</span>
               <span class="place">` + recommendedPlaces[index].place + `</span>
