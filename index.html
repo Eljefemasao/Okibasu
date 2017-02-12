@@ -54,7 +54,7 @@
             <form class="navbar-form navbar-right" onsubmit="event.preventDefault()">
                 <div class="search">
                     <div class="form-group">
-                        <input type="text" placeholder="いきたい場所を検索" class="form-control">
+                        <input id="search-input" type="text" placeholder="いきたい場所を検索" class="form-control">
                     </div>
                     <button id="place-search" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </div>
@@ -74,9 +74,9 @@
         </div><!--/.navbar-collapse -->
 
         <ul class="nav-tabs-oliginal">
-            <li class="current"><a href="">観光地</a></li>
-            <li><a href="">ホテル</a></li>
-            <li><a href="">レストラン</a></li>
+            <li id="tourism" class="current"><a href="#">観光地</a></li>
+            <li id="hotels"><a href="#">ホテル</a></li>
+            <li id="restaurants"><a href="#">レストラン</a></li>
         </ul>
     </nav>
 

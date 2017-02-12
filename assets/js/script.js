@@ -1,9 +1,51 @@
 $(document).ready(function(){
+  var restaurantInfo = [
+    {
+      img: "./assets/assets/images/restaurant/01.jpg",
+      name: "首里そば",
+      place:　"〒903-0813 Okinawa-ken, Naha-shi, 首里赤田町Shuriakatachō, 1 Chome−7"
+    },
+    {
+      img: "./assets/assets/images/restaurant/02.jpg",
+      name: "琉球料理赤田風",
+      place:　"1 Chome-1-37 Shuriakatachō, Naha-shi, Okinawa-ken 903-0813"
+    }
+  ];
+  var hotelInfo = [
+    {
+      img: "./assets/assets/images/hotel/01.jpg",
+      name: "沖縄ホテル",
+      place:　"1 Chome-1-37 Shuriakatachō, Naha-shi, Okinawa-ken 903-0813"
+    }
+  ];
 
   $('#place-search').click(function() {
+    var searchInput = $("#search-input").val();
+    console.log(searchInput);
     clearRecommendations();
     showSearchResults();
   });
+
+  $('#tourism').click(function() {
+    $("#restaurants").removeClass("current");
+    $("#hotels").removeClass("current");
+    $("#tourism").addClass("current");
+    searchCityCode();
+  })
+
+  $('#restaurants').click(function() {
+    $("#tourism").removeClass("current");
+    $("#hotels").removeClass("current");
+    $("#restaurants").addClass("current");
+    appendRecommendedPlaces(restaurantInfo);
+  })
+
+  $('#hotels').click(function() {
+    $("#restaurants").removeClass("current");
+    $("#tourism").removeClass("current");
+    $("#hotels").addClass("current");
+    appendRecommendedPlaces(hotelInfo);
+  })
 
   searchCityCode();
 
@@ -16,23 +58,44 @@ $(document).ready(function(){
 
     var busInfoArray = [
     { departureTime: "11:15",
-      arrivalTime: "11:28",
+      arrivalTime: "12:55",
       sumOfPay: "1,180",
       objective: "貨物ターミナル前（那覇空港）",
-      recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
+      recommendationLine: "琉球バス [25]"
     },
-    { departureTime: "11:15",
-      arrivalTime: "11:28",
+    { departureTime: "13:25",
+      arrivalTime: "14:12",
       sumOfPay: "1,180",
       objective: "貨物ターミナル前（那覇空港）",
-      recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
+      recommendationLine: "琉球バス [25]"
     },
-    { departureTime: "11:15",
-      arrivalTime: "11:28",
+    { departureTime: "14:11",
+      arrivalTime: "15:28",
       sumOfPay: "1,180",
       objective: "貨物ターミナル前（那覇空港）",
-      recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
+      recommendationLine: "琉球バス [25]"
     }
+
+    var aquariumInfoArray = [
+      { departureTime: "11:15",
+        arrivalTime: "11:28",
+        sumOfPay: "1,180",
+        objective: "貨物ターミナル前（那覇空港）",
+        recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
+      },
+      { departureTime: "11:15",
+        arrivalTime: "11:28",
+        sumOfPay: "1,180",
+        objective: "貨物ターミナル前（那覇空港）",
+        recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
+      },
+      { departureTime: "11:15",
+        arrivalTime: "11:28",
+        sumOfPay: "1,180",
+        objective: "貨物ターミナル前（那覇空港）",
+        recommendationLine: "沖縄バス [120]名護西空港線 名護バスターミナル行"
+      }
+    ]
 
   ]
   for(var index=0; index<busInfoArray.length;index++) {
@@ -59,9 +122,8 @@ $(document).ready(function(){
   }
 
 
-
-
   function appendRecommendedPlaces(localSpotsList) {
+    $("#recommended-places").empty();
     var recommendedPlaces = localSpotsList;
     for (var index = 0; index < recommendedPlaces.length; index++){
       $("#recommended-places").append(`<a class="spot col col-xs-12 col-sm-6 col-md-4" href="./index.html">
