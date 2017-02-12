@@ -194,7 +194,7 @@ a.bus-stop .line {
     padding: 20px 0;
 }
 .bus-stop-list > * .time-area {
-    padding-left: 20px;
+    padding-left: 10px;
     width: 6em;
 }
 .bus-stop-list > * .name-area {
@@ -220,6 +220,7 @@ a.bus-stop .line {
 
 .bus-stop-list a.bus-stop {
     background: #ffffff;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 .bus-stop-list a.bus-stop:hover {
     opacity: 0.5;
@@ -230,25 +231,37 @@ a.bus-stop .line {
     display: block;
 }
 .bus-stop-list a.bus-stop .num {
-    padding: 0 5px;
-    font-size: 1.75em;
+    padding: 0 2px;
+    font-size: 1.5em;
+    color: #2e98e8;
+    font-weight: bold;
 }
 
 .bus-stop-list > a.bus-stop .else-area {
-    padding: 5px;
+    padding: 5px 10px 5px 5px;
     align-self: center;
 }
 .bus-stop-list a.bus-stop .name {
-    font-size: 18px;
+    font-size: 16px;
 }
 .bus-stop-list a.bus-stop .line {
     margin-top: 5px;
     color: #999999;
-    font-size: 12px;
+    font-size: 10px;
 }
 .bus-stop-list a.bus-stop .transfer {
     margin-top: 10px;
-    font-size: 12px;
+    font-size: 10px;
+}
+.bus-stop-list a.bus-stop .fare {
+    margin-top: 10px;
+    font-size: 10px;
+}
+
+.bus-stop-list a.bus-stop * .transfer:not(.num),
+.bus-stop-list a.bus-stop * .fare:not(.num) {
+    margin-right: 15px;
+    display: inline-block;
 }
 
 .bus-stop .time-area .time {
@@ -262,6 +275,9 @@ a.bus-stop .line {
 .bus-stop .else-area .thumbnail {
     width: 60px;
     height: 60px;
+    /* 取り急ぎ
+    display: none;
+    */
 }
 
 
