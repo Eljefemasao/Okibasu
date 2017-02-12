@@ -11,6 +11,35 @@
 }
 
 
+.thumbnail {
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    border: none;
+
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    overflow: hidden;
+
+    line-height: 1;
+}
+.thumbnail > * {
+    min-width: 100%;
+    min-height: 100%;
+    max-width: none;
+    max-height: none;
+    display: block;
+}
+
 
 body {
 	letter-spacing: 0.075em;
@@ -106,10 +135,16 @@ body {
 
 
 /* バス停 */
+
+.bus-stop-area {
+    margin: 20px 0;
+}
+
+/
 a.bus-stop {
-    padding: 15px 0;
+    /* padding: 15px 0;
     border-top: 1px solid #cccccc;
-    display: block;
+    display: block; */
 }
 
 a.bus-stop,
@@ -117,6 +152,7 @@ a.bus-stop:hover {
     color: #111111;
     text-decoration: none;
 }
+/*
 a.bus-stop > * {
     display: block;
     line-height: 1.8;
@@ -130,6 +166,151 @@ a.bus-stop .line {
     display: block;
     font-size: 0.75em;
 }
+*/
+
+
+
+.bus-stop-list > * {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+
+    -webkit-align-items: baseline;
+    -ms-flex-align: baseline;
+    align-items: baseline;
+
+    -webkit-justify-content: stretch;
+    -ms-flex-pack: stretch;
+    justify-content: stretch;
+
+    box-sizing: border-box;
+}
+
+.bus-stop-list > * > * {
+    padding: 20px 0;
+}
+.bus-stop-list > * .time-area {
+    padding-left: 20px;
+    width: 6em;
+}
+.bus-stop-list > * .name-area {
+    padding-left: 10px;
+}
+.bus-stop-list > * .else-area {
+    margin-left: auto;
+/*
+    padding-left: 10px;
+    padding-right: 20px;
+*/
+    box-sizing: content-box;
+}
+
+
+
+
+
+
+.bus-stop-list a.bus-stop + a.bus-stop {
+    margin-top: 2px;
+}
+
+.bus-stop-list a.bus-stop {
+    background: #ffffff;
+}
+.bus-stop-list a.bus-stop:hover {
+    opacity: 0.5;
+}
+
+/*  */
+.bus-stop-list a.bus-stop * span:not(.num) {
+    display: block;
+}
+.bus-stop-list a.bus-stop .num {
+    padding: 0 5px;
+    font-size: 1.75em;
+}
+
+.bus-stop-list > a.bus-stop .else-area {
+    padding: 5px;
+    align-self: center;
+}
+.bus-stop-list a.bus-stop .name {
+    font-size: 18px;
+}
+.bus-stop-list a.bus-stop .line {
+    margin-top: 5px;
+    color: #999999;
+    font-size: 12px;
+}
+.bus-stop-list a.bus-stop .transfer {
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.bus-stop .time-area .time {
+
+}
+
+.bus-stop .name-area .time {
+
+}
+
+.bus-stop .else-area .thumbnail {
+    width: 60px;
+    height: 60px;
+}
+
+
+/*
+<div class="travel">
+    <div class="time-area">
+        <span class="time">5分</span>
+    </div>
+    <div class="name-area">
+        <span class="name">現在地</span>
+    </div>
+    <div class="else-area">
+        <span class="fare">¥480</span>
+    </div>
+</div>
+
+<a class="bus-stop">
+    <div class="time-area">
+        <span class="time">11:00</span>
+    </div>
+    <div class="name-area">
+        <span class="name">那覇空港国際線ターミナル前</span>
+        <span class="line">東陽バス・３１泡瀬西線・泡瀬営業所行</span>
+    </div>
+    <div class="else-area">
+        <div class="thumbnail">
+            <img src="" alt="">
+        </div>
+    </div>
+</a>
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* 観光地 */
