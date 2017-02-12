@@ -34,47 +34,34 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="./index.html">MyGo</a>
-            </div>
-            <div id="navbar" class="navbar-collapse collapse">
-                <form class="navbar-form navbar-right">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./index.html">MyGo</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse in">
+            <form class="navbar-form navbar-right">
+                <div class="search">
                     <div class="form-group">
                         <input type="text" placeholder="いきたい場所を検索" class="form-control">
                     </div>
-
                     <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
 
-                    <div class="language">
-                      <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                <div class="language">
+                    <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                         <span class="glyphicon glyphicons-globe" aria-hidden="true">日本語 </span>
                         <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <li>
-                            <a href="">繁体字</a>
-                        </li>
-                        <li>
-                          <a href="">簡体字</a>
-                        </li>
-                        <li>
-                          <a href="">English</a>
-                        </li>
-                        <li>
-                          <a href="">日本語</a>
-                        </li>
-                      </ul>
-                    </div>
-                </form>
-            </div><!--/.navbar-collapse -->
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a href="">繁体字</a></li>
+                        <li><a href="">簡体字</a></li>
+                        <li><a href="">English</a></li>
+                        <li><a href="">日本語</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div><!--/.navbar-collapse -->
     </nav>
 
     <div class="jumbotron" style="background-image: url(./assets/images/bus-stop-sample.jpg); background-position: center center; background-repeat: no-repeat; background-size: cover; height: 400px;">

@@ -425,14 +425,11 @@ body {
     .navbar-default .navbar-collapse {
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.25);
     }
-    
+
     .navbar-collapse .search,
     .navbar-collapse .language {
         display: inline-block;
-        margin-right: 5px;
-    }
-    .navbar-collapse .search {
-        margin-right: 20px;
+        margin-left: 20px;
     }
     .navbar-form .form-control {
         width: 300px;
