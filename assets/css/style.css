@@ -196,6 +196,7 @@ a.bus-stop .line {
 .bus-stop-list > * .time-area {
     padding-left: 10px;
     width: 6em;
+    text-align: center;
 }
 .bus-stop-list > * .name-area {
     padding-left: 10px;
@@ -264,12 +265,14 @@ a.bus-stop .line {
     display: inline-block;
 }
 
-.bus-stop .time-area .time {
-
-}
-
-.bus-stop .name-area .time {
-
+.bus-stop .time-area .time + .time:before {
+    content: "";
+    display: block;
+    margin: 8px auto;
+    width: 1px;
+    height: 8px;
+    background: #111111;
+    text-align: center;
 }
 
 .bus-stop .else-area .thumbnail {
