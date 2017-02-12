@@ -392,7 +392,10 @@ a.bus-stop .line {
 }
 .spot-list a.spot > .img img {
     min-width: 100%;
+/*
     min-height: 100%;
+*/
+    width: 100%;
     max-width: none;
     max-height: none;
 
