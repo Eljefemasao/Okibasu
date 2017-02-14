@@ -11,23 +11,23 @@
     <title></title>
 
     <!-- Bootstrap core CSS -->
-    <link href="./assets/assets/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="./assets/assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+    <link href="./assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="./assets/assets/css/jumbotron.css" rel="stylesheet">
+    <link href="./assets/css/jumbotron.css" rel="stylesheet">
 
-    <link href="./assets/assets/css/style.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
 
-    <script src="./assets/assets/js/script.js"></script>
-    <!--[if lt IE 9]><script src="../../assets/assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-    <script src="./assets/assets/js/ie-emulation-modes-warning.js"></script>
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="./assets/js/ie-emulation-modes-warning.js"></script>
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -37,6 +37,7 @@
 </head>
 
 <body class="home-page">
+  <div id="app">
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="navbar-header">
 <!--
@@ -47,7 +48,7 @@
                 <span class="icon-bar"></span>
             </button>
 -->
-            <a class="navbar-brand" href="./index.html">MyGo</a>
+            <a class="navbar-brand" href="/routefinder">MyGo</a>
         </div>
 
         <div id="navbar" class="navbar-collapse collapse in">
@@ -56,7 +57,7 @@
                     <div class="form-group">
                         <input id="search-input" type="text" placeholder="いきたい場所を検索" class="form-control">
                     </div>
-                    <button id="place-search" type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                    <button id="place-search" type="submit" class="btn btn-success" @click="searchLocation"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
                 </div>
                 <div class="language">
                     <button class="btn btn-default dropdown-toggle" data-toggle="dropdown">
@@ -74,43 +75,64 @@
         </div><!--/.navbar-collapse -->
 
         <ul class="nav-tabs-oliginal">
-            <li id="tourism" class="current"><a href="#">観光地</a></li>
-            <li id="hotels"><a href="#">ホテル</a></li>
-            <li id="restaurants"><a href="#">レストラン</a></li>
+            <li id="tourism" :class="{ current: tourismActive }" @click="toggleSitesTab('tourism')"><a href="#">観光地</a></li>
+            <li id="hotels" :class="{ current: hotelsActive }" @click="toggleSitesTab('hotels')"><a href="#">ホテル</a></li>
+            <li id="restaurants" :class="{ current: restaurantsActive }" @click="toggleSitesTab('restaurants')"><a href="#">レストラン</a></li>
         </ul>
     </nav>
 
-    <section class="spot-area">
+    <section class="spot-area" v-show="!locationSearched">
         <div class="container">
             <div id="recommended-places" class="spot-list row">
-
+              <a v-for="spot in currentRecommendedSites" class="spot col col-xs-12 col-sm-6 col-md-4" href="#" @click="recommendedSpotSelected">
+                  <div class="img">
+                      <img :src="spot.img" alt="">
+                  </div>
+                  <div class="content">
+                      <span class="name">{{ spot.name }}</span>
+                      <span class="place">{{ spot.place }}</span>
+                  </div>
+              </a>
             </div>
         </div>
     </section>
 
-    <section class="bus-stop-area">
+    <section class="bus-stop-area" v-show="locationSearched">
         <div class="container">
             <div class="bus-stop-list">
-
-            <div id="recommended-places" class="spot-list">
-
+              <a v-for="bus in busInfoArray" class="bus-stop" href="./stopinfo/">
+                  <div class="time-area">
+                      <span class="time">{{ bus.departureTime }}</span>
+                      <span class="time">{{ bus.arrivatTime }}</span>
+                  </div>
+                  <div class="name-area">
+                      <span class="name">{{ bus.objective }}</span>
+                      <span class="line">{{ bus.recommendationLine }}</span>
+                      <span class="transfer">乗り換え：<span class="num">1</span>回</span>
+                      <span class="fare">合計金額：<span class="num">{{ bus.sumOfPay }}</span>円</span>
+                  </div>
+                  <div class="else-area">
+                      <div class="thumbnail">
+                          <img src="./assets/images/bus-stop/02.jpg" alt="">
+                      </div>
+                  </div>
+              </a>
             </div>
-
-
-
         </div>
     </section>
 
 
 
-
+  </div>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../assets/assets/js/vendor/jquery.min.js"><\/script>')</script>
-    <script src="./assets/assets/js/bootstrap.min.js"></script>
+    <script>window.jQuery || document.write('<script src="./assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="./assets/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="./assets/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="./assets/js/vue-script.js"></script>
+
 </body>
 </html>
